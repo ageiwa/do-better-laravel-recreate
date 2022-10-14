@@ -15,3 +15,4 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', [PostController::class, 'index'])->name('index');
+Route::get('/{post}', [PostController::class, 'detail'])->name('detail');

@@ -21,10 +21,15 @@
         <div class="container">
             @foreach ($posts as $post)
                 <div class="post">
-                    <img src="{{ $post->img ?? '/images/default.jpg' }}">
-                    <p>{{ $post->title }}</p>
-                    <p>{{ $post->desc }}</p>
-                    <p>{{ $post->status }}</p>
+                    <img class="post__img" src="{{ $post->img ?? '/images/default.jpg' }}">
+                    <div class="post__body">
+                        <p class="post__title">{{ $post->title }}</p>
+                        <p class="post__desc">{{ $post->desc }}</p>
+                    </div>
+                    <div class="post__footer">
+                        <p class="post__status">Статус: {{ $post->status }}</p>
+                        <a class="post__link" href="{{ route('detail', ['post' => $post->id]) }}">Смотреть полностью</a>
+                    </div>
                 </div>
             @endforeach
         </div>

@@ -12,4 +12,10 @@ class PostController extends Controller
             'posts' => Post::all()
         ]);
     }
+
+    public function detail(Post $post) {
+        return view('detail', [
+            'post' => $post
+        ]);
+    }
 }
