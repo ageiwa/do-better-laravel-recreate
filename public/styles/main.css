@@ -9,14 +9,17 @@
     margin: 0 auto;
     width: 900px;
     height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .navbar {
     border: 1px solid #000;
     width: 100%;
     height: 70px;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
 }
 
 .navbar__link {
@@ -33,6 +36,8 @@
     background-color: #fff;
 }
 
+/* index */
+
 .posts {
     width: 100%;
 }
@@ -43,24 +48,70 @@
     gap: 20px;
 }
 
-.post {
+.post-item {
     padding: 10px;
     background-color: #ccc;
 }
 
-.post__body {
+.post-item__body {
     padding: 10px;
     background-color: #fff;
 }
 
-.post__img {
+.post-item__img {
     width: 100%;
 }
 
-.post__footer {
+.post-item__footer {
     padding: 10px;
     background-color: #f0f8ff;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+/* detail */
+
+.post {
+    height: 400px;
+}
+
+.post .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.post__img img {
+    width: 100%;
+}
+
+.post__content {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.post__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post__title {
+    padding: 10px;
+    width: 100%;
+    background-color: #ccc;
+}
+
+.post__desc {
+    padding: 10px;
+    height: 100%;
+    background-color: #f4ffb7;
+}
+
+.post__info {
+    padding: 10px;
+    background-color: #f0f8ff;
+    display: flex;
     justify-content: space-between;
 }
