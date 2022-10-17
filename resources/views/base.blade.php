@@ -12,12 +12,16 @@
     <nav class="navbar">
         <div class="container">
             <a class="navbar__link" href="{{ route('index') }}">Главная</a>
+            @guest
             <a class="navbar__link" href="{{ route('login') }}">Вход</a>
             <a class="navbar__link" href="{{ route('register') }}">Регистрация</a>
+            @endguest
+            @auth
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <input type="submit" value="Выйти">
+                <input type="submit" value="Выйти" class="navbar__link">
             </form>
+            @endauth
         </div>
     </nav>
 
