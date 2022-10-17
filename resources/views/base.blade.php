@@ -17,6 +17,7 @@
             <a class="navbar__link" href="{{ route('register') }}">Регистрация</a>
             @endguest
             @auth
+            <a class="navbar__link" href="{{ route('home') }}">Мои заявки</a>
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <input type="submit" value="Выйти" class="navbar__link">

@@ -24,4 +24,5 @@ Route::group(['middleware' => 'admin'], function () {
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home/add', [HomeController::class, 'showAddPostForm'])->name('add.post');
 Route::get('/{post}', [PostController::class, 'detail'])->name('detail');
